@@ -34,7 +34,7 @@ const Media = () => (
             Nettleseren din støtter ikke videoavspilling.
           </video>
         </AspectRatio>
-        <p className="text-center text-muted-foreground text-sm mt-3">Video fra konsert</p>
+        <p className="text-center text-muted-foreground text-sm mt-3">Video fra vår jubileumskonsert</p>
       </div>
 
       {/* Photo gallery */}
