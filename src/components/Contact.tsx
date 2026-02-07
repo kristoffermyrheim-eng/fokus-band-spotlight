@@ -10,14 +10,44 @@ const Contact = () => {
   const { toast } = useToast();
   const [sending, setSending] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setSending(true);
-    setTimeout(() => {
-      toast({ title: "Takk for din henvendelse!", description: "Vi tar kontakt så snart som mulig." });
-      (e.target as HTMLFormElement).reset();
+
+    const formData = new FormData(e.currentTarget);
+    // Legg til din Web3Forms Access Key her:
+    formData.append("access_key", "0ecb3af9-20e5-4c3c-b2c8-1f3e6bf3b2b6");
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        toast({ 
+          title: "Takk for din henvendelse!", 
+          description: "Vi har mottatt meldingen og tar kontakt så snart som mulig." 
+        });
+        (e.target as HTMLFormElement).reset();
+      } else {
+        toast({ 
+          variant: "destructive",
+          title: "Oops!", 
+          description: "Noe gikk galt. Vennligst prøv igjen senere." 
+        });
+      }
+    } catch (error) {
+      toast({ 
+        variant: "destructive",
+        title: "Feil", 
+        description: "Kunne ikke koble til serveren." 
+      });
+    } finally {
       setSending(false);
-    }, 600);
+    }
   };
 
   return (
@@ -32,22 +62,27 @@ const Contact = () => {
 
         <div className="grid md:grid-cols-2 gap-12">
           <form onSubmit={handleSubmit} className="space-y-5">
+            {/* Navn-feltet må ha 'name="name"' for at Web3Forms skal skjønne det */}
             <div>
               <Label htmlFor="name">Navn</Label>
-              <Input id="name" required placeholder="Ditt navn" className="mt-1.5 bg-card" />
+              <Input id="name" name="name" required placeholder="Ditt navn" className="mt-1.5 bg-card" />
             </div>
             <div>
               <Label htmlFor="email">E-post</Label>
-              <Input id="email" type="email" required placeholder="din@epost.no" className="mt-1.5 bg-card" />
+              <Input id="email" name="email" type="email" required placeholder="din@epost.no" className="mt-1.5 bg-card" />
             </div>
             <div>
               <Label htmlFor="date">Dato for arrangement</Label>
-              <Input id="date" type="date" className="mt-1.5 bg-card" />
+              <Input id="date" name="date" type="date" className="mt-1.5 bg-card" />
             </div>
             <div>
               <Label htmlFor="message">Melding</Label>
-              <Textarea id="message" required rows={4} placeholder="Fortell oss om arrangementet..." className="mt-1.5 bg-card" />
+              <Textarea id="message" name="message" required rows={4} placeholder="Fortell oss om arrangementet..." className="mt-1.5 bg-card" />
             </div>
+            
+            {/* Valgfritt: Legg til emne for e-posten du mottar */}
+            <input type="hidden" name="subject" value="Ny bookingforespørsel fra nettsiden"></input>
+            
             <Button type="submit" size="lg" className="w-full" disabled={sending}>
               {sending ? "Sender..." : "Send melding"}
             </Button>
