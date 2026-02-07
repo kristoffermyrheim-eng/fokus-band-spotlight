@@ -82,6 +82,9 @@ const Contact = () => {
             
             {/* Valgfritt: Legg til emne for e-posten du mottar */}
             <input type="hidden" name="subject" value="Ny bookingforespørsel fra nettsiden"></input>
+            <input type="hidden" name="from_name" value="Storbandet Fokus Nettside" />
+            <input type="hidden" name="subject" value="Ny bookingforespørsel" />
+            <input type="checkbox" name="botcheck" className="hidden" style={{ display: "none" }} />
             
             <Button type="submit" size="lg" className="w-full" disabled={sending}>
               {sending ? "Sender..." : "Send melding"}
