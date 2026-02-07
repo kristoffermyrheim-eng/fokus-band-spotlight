@@ -63,14 +63,14 @@ const Contact = () => {
                 </div>
                 <div className="flex items-center gap-3">
                   <Phone size={18} className="text-primary" />
-                  <span>+47 123 45 678</span>
+                  <span>+47 404 54 960</span>
                 </div>
               </div>
             </div>
             <div>
               <h3 className="font-serif-display text-xl font-semibold mb-3">Følg oss</h3>
               <div className="flex gap-4 text-muted-foreground">
-                <a href="#" className="hover:text-primary transition-colors">Facebook</a>
+                <a href="https://www.facebook.com/profile.php?id=100063801992583" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Facebook</a>
                 <a href="#" className="hover:text-primary transition-colors">Instagram</a>
                 <a href="#" className="hover:text-primary transition-colors">YouTube</a>
               </div>
