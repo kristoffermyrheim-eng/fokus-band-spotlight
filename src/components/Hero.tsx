@@ -20,7 +20,7 @@ const Hero = () => (
         Storbandet Fokus
       </h1>
       <p className="text-lg sm:text-xl text-muted-foreground max-w-xl mx-auto mb-10 opacity-0 animate-fade-up [animation-delay:0.4s]">
-        Vestfolds mest engasjerende storband — med lang fartstid og anerkjennelse for å levere uforglemmelige musikalske opplevelser.
+        Kanskje Vestfolds mest engasjerende storband — med lang fartstid og anerkjennelse for å levere uforglemmelige musikalske opplevelser.
       </p>
       <div className="opacity-0 animate-fade-up [animation-delay:0.6s]">
         <Button size="lg" className="text-base px-8 py-6" asChild>
