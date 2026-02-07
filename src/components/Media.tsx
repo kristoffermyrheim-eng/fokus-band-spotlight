@@ -1,6 +1,5 @@
-import { Play } from "lucide-react";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
-
+import konsertVideo from "@/assets/konsert-video.mp4";
 const photos = [
   "Storbandet på scenen under festival",
   "Nærbilde av saksofonist",
@@ -21,13 +20,16 @@ const Media = () => (
       {/* Video placeholder */}
       <div className="max-w-3xl mx-auto mb-16">
         <AspectRatio ratio={16 / 9}>
-          <div className="w-full h-full bg-card border border-border rounded-lg flex items-center justify-center cursor-pointer group hover:border-primary/40 transition-colors">
-            <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center group-hover:bg-primary/30 transition-colors">
-              <Play className="text-primary ml-1" size={28} />
-            </div>
-          </div>
+          <video
+            className="w-full h-full rounded-lg object-cover"
+            controls
+            preload="metadata"
+          >
+            <source src={konsertVideo} type="video/mp4" />
+            Nettleseren din støtter ikke videoavspilling.
+          </video>
         </AspectRatio>
-        <p className="text-center text-muted-foreground text-sm mt-3">Video fra konsert — kommer snart</p>
+        <p className="text-center text-muted-foreground text-sm mt-3">Video fra konsert</p>
       </div>
 
       {/* Photo gallery */}
