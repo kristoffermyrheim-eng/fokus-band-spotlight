@@ -1,10 +1,15 @@
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import konsertVideo from "@/assets/konsert-video.mp4";
+import gallery1 from "@/assets/gallery-1.avif";
+import gallery2 from "@/assets/gallery-2.avif";
+import gallery3 from "@/assets/gallery-3.jpg";
+import gallery4 from "@/assets/gallery-4.jpg";
+
 const photos = [
-  "Storbandet på scenen under festival",
-  "Nærbilde av saksofonist",
-  "Bandet på bedriftsevent",
-  "Jazzaften med fullt band",
+  { src: gallery1, alt: "Vokalist med bandet" },
+  { src: gallery2, alt: "Bandet på event" },
+  { src: gallery3, alt: "Konsert med rødt scenelys" },
+  { src: gallery4, alt: "Fullt band på scenen med publikum" },
 ];
 
 const Media = () => (
@@ -17,7 +22,7 @@ const Media = () => (
         Få en smakebit av hva vi kan tilby.
       </p>
 
-      {/* Video placeholder */}
+      {/* Video */}
       <div className="max-w-3xl mx-auto mb-16">
         <AspectRatio ratio={16 / 9}>
           <video
@@ -34,9 +39,14 @@ const Media = () => (
 
       {/* Photo gallery */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        {photos.map((alt, i) => (
-          <div key={i} className="aspect-square bg-card border border-border rounded-lg flex items-center justify-center hover:border-primary/40 transition-colors">
-            <span className="text-muted-foreground text-xs text-center px-4">{alt}</span>
+        {photos.map((photo, i) => (
+          <div key={i} className="aspect-square overflow-hidden rounded-lg border border-border hover:border-primary/40 transition-colors">
+            <img
+              src={photo.src}
+              alt={photo.alt}
+              className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+              loading="lazy"
+            />
           </div>
         ))}
       </div>
