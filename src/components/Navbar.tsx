@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/fokus-logo.avif";
 
 const links = [
   { label: "Om oss", href: "#about" },
@@ -15,8 +16,8 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <div className="container mx-auto flex items-center justify-between h-16 px-4">
-        <a href="#" className="font-serif-display text-xl font-bold text-primary">
-          Storbandet Fokus
+        <a href="#" className="flex items-center gap-3">
+          <img src={logo} alt="Storbandet Fokus logo" className="h-10 w-auto" />
         </a>
         <div className="hidden md:flex items-center gap-8">
           {links.map((l) => (
