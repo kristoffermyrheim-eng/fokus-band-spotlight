@@ -2,7 +2,7 @@ import { Music, Users, Star } from "lucide-react";
 
 const features = [
   { icon: Music, title: "Allsidig repertoar", desc: "Fra klassisk jazz og swing til funk, soul og moderne pop-arrangementer." },
-  { icon: Users, title: "20+ musikere", desc: "Et fullbemannet storband med erfarne musikere fra Vestfold-regionen." },
+  { icon: Users, title: "18 musikere", desc: "Et fullbemannet storband med erfarne musikere fra Vestfold-regionen." },
   { icon: Star, title: "Lang fartstid", desc: "Stor track record med hundrevis av opptredener — og bred anerkjennelse for det vi leverer." },
 ];
 
