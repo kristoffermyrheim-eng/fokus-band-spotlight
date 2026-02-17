@@ -12,7 +12,7 @@ const boardMembers = [
   { name: "Kristoffer Myrheim", role: "Leder", image: kristofferImg },
   { name: "Roar Myrheim", role: "Styremedlem", image: roarImg },
   { name: "Toto Hagen", role: "Styremedlem", image: totoImg },
-  { name: "Gløer Gløersen", role: "Styremedlem", image: gloerImg },
+  { name: "Gløer Gløersen", role: "Varamedlem", image: gloerImg },
 ];
 
 const News = () => {
@@ -53,8 +53,7 @@ const News = () => {
                 Vi takker han for iherdig innsats over mange år.
               </p>
               <p>
-                Ny leder, <span className="text-foreground font-medium">Kristoffer Myrheim</span>,
-                ble valgt inn på årsmøtet. I styret sitter ellers Roar Myrheim, Toto Hagen og Gløer Gløersen.
+                Ny leder, Kristoffer Myrheim, ble valgt inn på årsmøtet. I styret sitter ellers Roar Myrheim, Toto Hagen og Gløer Gløersen.
               </p>
             </div>
 
