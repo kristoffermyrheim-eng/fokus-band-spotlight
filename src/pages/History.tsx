@@ -29,9 +29,24 @@ const timelineEvents = [
     text: "Storbandet håndterer alt fra tradisjonell storbandjazz og mainstream jazz til dansbare låter innen latin, rock, disco, swing, vals, tango, blues og R&B. Bandet har gjennomført store produksjoner som «From Broadway to Borreveien», «A Tribute to Glenn Miller» og «Storbandjazzens Gullalder».",
   },
   {
+    year: "2022",
+    title: "Konsert med Heine Totland",
+    text: "Storbandet gjennomførte en konsert med den kjente artisten Heine Totland.",
+  },
+  {
+    year: "2023",
+    title: "Konserter med stjernekraft",
+    text: "I 2023 holdt bandet konsert med Hilde Louise Asbjørnsen, samt en spektakulær James Bond-konsert med John Berge.",
+  },
+  {
+    year: "2024",
+    title: "ABBA-konserter med Chili Vokal",
+    text: "Storbandet satte opp to populære ABBA-konserter i samarbeid med vokalgruppa Chili Vokal.",
+  },
+  {
     year: "2025",
     title: "50-årsjubileum",
-    text: "I 2025 feirer Storbandet Fokus 50 år med musikk, fellesskap og uforglemmelige opplevelser. Fra et lite korps i Vestfold til et anerkjent storband — historien fortsetter.",
+    text: "I 2025 feirer Storbandet Fokus 50 år med en stor jubileumskonsert. Gjesteartister var Hilde Louise Asbjørnsen, Ingar Kristiansen, Tarjei Grimsby, Line Knudsen, Trond Pedersen, Steinar Brenna og Hans Mathisen — i tillegg til fast vokalist Lena Jørgensen.",
   },
 ];
 
@@ -153,7 +168,7 @@ const History = () => (
           <p className="text-muted-foreground leading-relaxed">
             Storbandet har gjennom årene presentert mange vokalister. Faste vokalister har vært
             Sigbjørn Andersen, Line Knudsen, Erik Salminen — og vår nåværende vokalist{" "}
-            <span className="text-primary font-semibold">Lene Jørgensen</span>.
+            <span className="text-primary font-semibold">Lena Jørgensen</span>.
           </p>
         </div>
       </section>
