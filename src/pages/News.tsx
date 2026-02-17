@@ -44,21 +44,34 @@ const News = () => {
             </div>
 
             <h2 className="text-2xl md:text-3xl font-serif-display font-bold mb-6">
-              Nytt styre i Storbandet Fokus
+              Nye takter i Storbandet Fokus: Kristoffer Myrheim tar over som leder i styret
             </h2>
 
             <div className="space-y-4 text-muted-foreground leading-relaxed mb-8">
               <p>
-                Etter flere år med ledervervet, trekker Trygve Sivertsen seg ut av styret i bandet.
-                Vi takker han for iherdig innsats over mange år.
+                Etter et innholdsrikt jubileumsår og mange år med stødig kurs, skjer det nå endringer i kulissene hos Storbandet Fokus. På årets årsmøte ble et nytt styre valgt, og vi markerer samtidig slutten på en viktig epoke i bandets historie.
               </p>
+
+              <h3 className="text-xl font-serif-display font-semibold text-foreground pt-2">
+                En stor takk til Trygve Sivertsen
+              </h3>
               <p>
-                Ny leder, Kristoffer Myrheim, ble valgt inn på årsmøtet. I styret sitter ellers Roar Myrheim, Toto Hagen og Gløer Gløersen.
+                Etter flere år med utrettelig innsats som leder, har Trygve Sivertsen valgt å tre ut av styret. Trygve har vært en bærebjelke i bandet gjennom mange år, og hans iherdige arbeid har vært avgjørende for at vi i dag er et av regionens mest vitale storband. Vi retter en stor og hjertelig takk til Trygve for alt han har lagt ned av tid og sjel i Fokus!
               </p>
+
+              <h3 className="text-xl font-serif-display font-semibold text-foreground pt-2">
+                Klar for de neste 50 årene
+              </h3>
+              <p>
+                Det er med stolthet og entusiasme vi presenterer Kristoffer Myrheim som ny leder for Storbandet Fokus. Med seg på laget har han et styre som kombinerer erfaring og brennende engasjement for storbandmusikken.
+              </p>
+              <blockquote className="border-l-4 border-primary pl-4 italic">
+                "Det er en ære å få lede et band med så mye tradisjon og spilleglede. Vi skal bygge videre på det gode fundamentet vi har, og sørge for at Storbandet Fokus fortsetter å levere musikalske opplevelser med skikkelig trøkk," sier den påtroppende lederen.
+              </blockquote>
             </div>
 
             <h3 className="text-xl font-serif-display font-semibold mb-6 text-foreground">
-              Det nye styret
+              Det nye styret består av:
             </h3>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -77,7 +90,11 @@ const News = () => {
               ))}
             </div>
           </article>
-        </div>
+            </div>
+
+            <p className="mt-8 text-muted-foreground leading-relaxed">
+              Det nye styret er allerede i gang med planleggingen av kommende konserter og prosjekter. Vi gleder oss til å se hva fremtiden bringer for gjengen i Re!
+            </p>
       </main>
       <Footer />
     </>
