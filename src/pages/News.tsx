@@ -63,7 +63,7 @@ const News = () => {
                 Klar for de neste 50 årene
               </h3>
               <p>
-                Det er med stolthet og entusiasme vi presenterer Kristoffer Myrheim som ny leder for Storbandet Fokus. Med seg på laget har han et styre som kombinerer erfaring og brennende engasjement for storbandmusikken.
+                Det er med glede vi presenterer Kristoffer Myrheim som ny leder for Storbandet Fokus. Med seg på laget har han et styre som kombinerer erfaring og brennende engasjement for storbandmusikken.
               </p>
               <blockquote className="border-l-4 border-primary pl-4 italic">
                 "Det er en ære å få lede et band med så mye tradisjon og spilleglede. Vi skal bygge videre på det gode fundamentet vi har, og sørge for at Storbandet Fokus fortsetter å levere musikalske opplevelser med skikkelig trøkk," sier den påtroppende lederen.
