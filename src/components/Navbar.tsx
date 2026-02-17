@@ -9,6 +9,7 @@ const links = [
   { label: "Media", href: "#media" },
   { label: "Konserter", href: "#events" },
   { label: "Vår Historie", href: "/var-historie" },
+  { label: "Nyheter", href: "/nyheter" },
   { label: "Kontakt", href: "#contact" },
 ];
 
