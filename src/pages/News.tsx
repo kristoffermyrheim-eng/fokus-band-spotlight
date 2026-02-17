@@ -68,6 +68,9 @@ const News = () => {
               <blockquote className="border-l-4 border-primary pl-4 italic">
                 "Det er en ære å få lede et band med så mye tradisjon og spilleglede. Vi skal bygge videre på det gode fundamentet vi har, og sørge for at Storbandet Fokus fortsetter å levere musikalske opplevelser med skikkelig trøkk," sier den påtroppende lederen.
               </blockquote>
+              <p>
+              Det nye styret er allerede i gang med planleggingen av kommende konserter og prosjekter. Vi gleder oss til å se hva fremtiden bringer for gjengen i Re!
+              </p>
             </div>
 
             <h3 className="text-xl font-serif-display font-semibold mb-6 text-foreground">
@@ -91,10 +94,6 @@ const News = () => {
             </div>
           </article>
             </div>
-
-            <p className="mt-8 text-muted-foreground leading-relaxed">
-              Det nye styret er allerede i gang med planleggingen av kommende konserter og prosjekter. Vi gleder oss til å se hva fremtiden bringer for gjengen i Re!
-            </p>
       </main>
       <Footer />
     </>
