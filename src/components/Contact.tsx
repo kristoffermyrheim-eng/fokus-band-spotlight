@@ -109,7 +109,10 @@ const Contact = () => {
               <div className="flex gap-4 text-muted-foreground">
                 <a href="https://www.facebook.com/profile.php?id=100063801992583" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Facebook</a>
                 <a href="#" className="hover:text-primary transition-colors">Instagram</a>
-                <a href="#" className="hover:text-primary transition-colors">YouTube</a>
+                <a href="http://www.youtube.com/@thoroj"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-primary transition-colors">YouTube</a>
               </div>
             </div>
           </div>
