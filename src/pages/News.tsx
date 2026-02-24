@@ -36,7 +36,40 @@ const News = () => {
             Nyheter
           </h1>
 
-          {/* News article */}
+          {/* Bakgårdsfestivalen article */}
+          <article className="bg-card rounded-lg border border-border p-6 md:p-10 mb-8">
+            <div className="flex items-center gap-2 text-muted-foreground text-sm mb-4">
+              <Calendar className="h-4 w-4" />
+              <time>2025</time>
+            </div>
+
+            <h2 className="text-2xl md:text-3xl font-serif-display font-bold mb-6">
+              Storbandet Fokus spiller på Bakgårdsfestivalen i Tønsberg 5. juni
+            </h2>
+
+            <div className="space-y-4 text-muted-foreground leading-relaxed">
+              <p>
+                Storbandet Fokus har gleden av å kunngjøre at vi spiller konsert under Bakgårdsfestivalen i Tønsberg fredag 5. juni 2026.
+              </p>
+              <p>
+                Bakgårdsfestivalen er et frivillig drevet kulturarrangement som skaper liv og stemning i Tønsberg sentrum, med konserter og opplevelser i intime og uformelle omgivelser. Festivalen bygger på dugnadsånd og lokalt engasjement, og vi er stolte over å få være en del av dette fellesskapet.
+              </p>
+              <p>
+                Publikum kan glede seg til en energisk storbandkonsert med variert repertoar – fra klassisk storbandjazz til mer moderne arrangementer – fremført av engasjerte musikere med sterk lokal tilknytning. For Storbandet Fokus er det viktig å bidra til levende byliv og tilgjengelige kulturopplevelser for et bredt publikum.
+              </p>
+              <p>
+                Festivalen og konserten er i stor grad basert på frivillighet, og arrangementet gjennomføres med begrensede midler. At vi likevel får mulighet til å spille for publikum i Tønsberg sentrum, betyr mye for oss og understreker verdien av samarbeid mellom kulturaktører, frivillige og lokalt næringsliv.
+              </p>
+              <p>
+                Vi håper å se både faste lyttere og nye ansikter i publikum når vi fyller bakgården med storbandlyd fredag 5. juni.
+              </p>
+              <p className="font-medium text-foreground">
+                Velkommen til konsert!
+              </p>
+            </div>
+          </article>
+
+          {/* Nytt styre article */}
           <article className="bg-card rounded-lg border border-border p-6 md:p-10">
             <div className="flex items-center gap-2 text-muted-foreground text-sm mb-4">
               <Calendar className="h-4 w-4" />
