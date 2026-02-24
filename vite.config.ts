@@ -4,7 +4,7 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 export default defineConfig(({ mode }) => ({
-  base: "/fokus-band-spotlight/", // ✅ KRITISK FOR GITHUB PAGES
+  base: "/", // ✅ KRITISK FOR GITHUB PAGES
   server: {
     host: "::",
     port: 8080,
