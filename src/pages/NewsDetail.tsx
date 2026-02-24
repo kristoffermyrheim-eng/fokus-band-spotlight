@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 import { getNewsArticles, getNewsArticleBySlug } from "@/data/news";
 import { toast } from "sonner";
 
-const SITE_URL = "https://ny.storbandetfokus.com";
+const SITE_URL = "https://www.storbandetfokus.no";
 
 const NewsDetail = () => {
   const { slug } = useParams<{ slug: string }>();
