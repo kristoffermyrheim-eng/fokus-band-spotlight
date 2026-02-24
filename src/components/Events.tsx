@@ -1,10 +1,7 @@
 import { CalendarDays, MapPin } from "lucide-react";
 
 const events = [
-  { date: "15. mars 2026", venue: "Oslo Konserthus", desc: "Storbandaften med gjestevokalist — klassisk jazz og swing." },
-  { date: "4. april 2026", venue: "Blå, Oslo", desc: "Intimkonsert med funk & soul repertoar." },
-  { date: "21. juni 2026", venue: "Øyafestivalen", desc: "Festivalopptreden med fullt band og storslått show." },
-  { date: "12. september 2026", venue: "Grand Hotel, Oslo", desc: "Privat bedriftsarrangement — elegant cocktailmusikk." },
+  { date: "5. juni 2026", venue: "Bakgårdsfestivalen, Tønsberg", desc: "Festivalopptreden med fullt band og storslått show." },
 ];
 
 const Events = () => (
