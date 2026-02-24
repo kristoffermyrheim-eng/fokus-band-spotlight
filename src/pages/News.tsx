@@ -7,6 +7,7 @@ import kristofferImg from "@/assets/kristoffer.jpg";
 import roarImg from "@/assets/roar.jpg";
 import totoImg from "@/assets/toto.jpg";
 import gloerImg from "@/assets/gloer.jpg";
+import bakgardsfestivalenLogo from "@/assets/bakgardsfestivalen-logo.jpg";
 
 const boardMembers = [
   { name: "Kristoffer Myrheim", role: "Leder", image: kristofferImg },
@@ -46,6 +47,14 @@ const News = () => {
             <h2 className="text-2xl md:text-3xl font-serif-display font-bold mb-6">
               Storbandet Fokus spiller på Bakgårdsfestivalen i Tønsberg 5. juni
             </h2>
+
+            <div className="flex justify-center mb-6">
+              <img
+                src={bakgardsfestivalenLogo}
+                alt="Bakgårdsfestivalen logo"
+                className="h-40 rounded-lg"
+              />
+            </div>
 
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
