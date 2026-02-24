@@ -1,6 +1,24 @@
 <!doctype html>
 <html lang="en">
   <head>
+<script>
+  (function () {
+    var params = new URLSearchParams(window.location.search);
+    var p = params.get("p");
+    if (p) {
+      var q = params.get("q");
+      var h = params.get("h");
+
+      // Rydd URL: fjern p/q/h og sett tilbake opprinnelig path
+      var newPath = decodeURIComponent(p);
+      var newQuery = q ? "?" + decodeURIComponent(q) : "";
+      var newHash = h ? "#" + decodeURIComponent(h) : "";
+
+      // Bytt URL uten å reloade (så appen kan route normalt)
+      window.history.replaceState(null, "", newPath + newQuery + newHash);
+    }
+  })();
+</script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="/FokusLogo.png" />
