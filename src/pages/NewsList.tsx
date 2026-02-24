@@ -45,7 +45,7 @@ const NewsList = () => {
                   <article className="bg-card rounded-lg border border-border p-6 md:p-8 transition-shadow hover:shadow-lg">
                     <div className="flex flex-col md:flex-row gap-6">
                       {article.coverImageUrl && (
-                        <div className="md:w-48 md:h-32 flex-shrink-0">
+                        <div className="md:w-48 md:h-48 flex-shrink-0">
                           <img
                             src={article.coverImageUrl}
                             alt={article.title}
