@@ -96,7 +96,7 @@ const Contact = () => {
               <div className="space-y-3 text-muted-foreground">
                 <div className="flex items-center gap-3">
                   <Mail size={18} className="text-primary" />
-                  <span>booking@storbandetfokus.com</span>
+                  <span>booking@storbandetfokus.no</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <Phone size={18} className="text-primary" />
