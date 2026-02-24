@@ -17,7 +17,7 @@ export const newsArticles: NewsArticle[] = [
     id: "1",
     title: "Storbandet Fokus spiller på Bakgårdsfestivalen i Tønsberg 5. juni",
     slug: "bakgardsfestivalen-tonsberg-2026",
-    date: "2025-12-01",
+    date: "24.02.2026",
     excerpt:
       "Storbandet Fokus har gleden av å kunngjøre at vi spiller konsert under Bakgårdsfestivalen i Tønsberg fredag 5. juni 2026.",
     coverImageUrl: bakgardsfestivalenLogo,
@@ -34,8 +34,8 @@ export const newsArticles: NewsArticle[] = [
     id: "2",
     title:
       "Nye takter i Storbandet Fokus: Kristoffer Myrheim tar over som leder i styret",
-    slug: "nytt-styre-2025",
-    date: "2025-02-01",
+    slug: "nytt-styre-2026",
+    date: "12.02.2026",
     excerpt:
       "Etter et innholdsrikt jubileumsår skjer det endringer i kulissene. Kristoffer Myrheim er valgt som ny leder for Storbandet Fokus.",
     coverImageUrl: kristofferImg,
