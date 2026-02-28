@@ -10,6 +10,7 @@ const links = [
   { label: "Konserter", href: "#events" },
   { label: "Vår Historie", href: "/var-historie" },
   { label: "Nyheter", href: "/nyheter" },
+  { label: "Videoer", href: "/videoer" },
   { label: "Kontakt", href: "#contact" },
 ];
 
