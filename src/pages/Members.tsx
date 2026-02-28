@@ -64,7 +64,7 @@ const sections = [
        bio: "Holder takten og energien oppe i alt fra tradisjonell jazz til dansbare låter. " }, 
       { name: "Jan Ekornrud", 
         role: "Bass", 
-        bio: "Sørger for den stødige grunnmuren i bandets "swing". " }, 
+        bio: `Sørger for den stødige grunnmuren i bandets "swing". ` }, 
       { name: "Roar Myrheim", 
        role: "Piano", 
        bio: "Erfaren pianist og organist som også sitter i styret for storbandet. " }, 
@@ -75,7 +75,7 @@ const sections = [
     image: dirigentImg,
     members: [{ name: "Øyvinn Pedersen", 
                role: "Dirigent", 
-               bio: "Musikalsk leder med over 30 års erfaring i bandet. Han pendler ukentlig fra Modum for å lede øvelsene. Øyvinn er også en dyktig saksofonist og er kjent for sin evne til å drive både profesjonell musikk og "voksenopplæring" med glimt i øyet." }, ],
+               bio: `Musikalsk leder med over 30 års erfaring i bandet. Han pendler ukentlig fra Modum for å lede øvelsene. Øyvinn er også en dyktig saksofonist og er kjent for sin evne til å drive både profesjonell musikk og "voksenopplæring" med glimt i øyet.` }, ],
   },
     {
     title: "Vokalist",
