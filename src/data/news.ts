@@ -15,23 +15,6 @@ export interface NewsArticle {
 export const newsArticles: NewsArticle[] = [
   {
     id: "1",
-    title: "Storbandet Fokus spiller på Bakgårdsfestivalen i Tønsberg 5. juni",
-    slug: "bakgardsfestivalen-tonsberg-2026",
-    date: "02.24.2026",
-    excerpt:
-      "Storbandet Fokus har gleden av å kunngjøre at vi spiller konsert under Bakgårdsfestivalen i Tønsberg fredag 5. juni 2026.",
-    coverImageUrl: bakgardsfestivalenLogo,
-    content: `
-      <p>Storbandet Fokus har gleden av å kunngjøre at vi spiller konsert under Bakgårdsfestivalen i Tønsberg fredag 5. juni 2026.</p>
-      <p>Bakgårdsfestivalen er et frivillig drevet kulturarrangement som skaper liv og stemning i Tønsberg sentrum, med konserter og opplevelser i intime og uformelle omgivelser. Festivalen bygger på dugnadsånd og lokalt engasjement, og vi er stolte over å få være en del av dette fellesskapet.</p>
-      <p>Publikum kan glede seg til en energisk storbandkonsert med variert repertoar – fra klassisk storbandjazz til mer moderne arrangementer – fremført av engasjerte musikere med sterk lokal tilknytning. For Storbandet Fokus er det viktig å bidra til levende byliv og tilgjengelige kulturopplevelser for et bredt publikum.</p>
-      <p>Festivalen og konserten er i stor grad basert på frivillighet, og arrangementet gjennomføres med begrensede midler. At vi likevel får mulighet til å spille for publikum i Tønsberg sentrum, betyr mye for oss og understreker verdien av samarbeid mellom kulturaktører, frivillige og lokalt næringsliv.</p>
-      <p>Vi håper å se både faste lyttere og nye ansikter i publikum når vi fyller bakgården med storbandlyd fredag 5. juni.</p>
-      <p><strong>Velkommen til konsert!</strong></p>
-    `,
-  },
-  {
-    id: "2",
     title:
       "Nye takter i Storbandet Fokus: Kristoffer Myrheim tar over som leder i styret",
     slug: "nytt-styre-2026",
