@@ -106,18 +106,28 @@ const Members = () => (
                   loading="lazy"
                 />
               </div>
-              <ul className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+              <ul className="grid grid-cols-1 md:grid-cols-2 gap-4"> 
                 {section.members.map((member) => (
                   <li
                     key={member.name}
-                    className="bg-card border border-border rounded-md px-4 py-3 text-sm"
+                    className="bg-card border border-border rounded-lg p-5 text-sm flex flex-col gap-2 shadow-sm"
                   >
-                  <p className="font-bold">{member.name}</p>
-                    {member.role && (
-                  <p className="text-xs text-muted-foreground">{member.role}</p>
-                )}
-               </li>
-              ))}
+                    <div className="flex flex-col">
+                      <span className="font-bold text-lg text-foreground leading-tight">
+                        {member.name}
+                      </span>
+                      <span className="text-primary font-medium text-xs uppercase tracking-wider">
+                        {member.role}
+                      </span>
+                    </div>
+                    
+                    {member.bio && (
+                      <p className="text-muted-foreground text-sm leading-relaxed mt-2 border-t border-border pt-2">
+                        {member.bio}
+                      </p>
+                    )}
+                  </li>
+                ))}
               </ul>
             </section>
           ))}
