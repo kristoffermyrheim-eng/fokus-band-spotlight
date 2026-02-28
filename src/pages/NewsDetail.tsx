@@ -27,15 +27,15 @@ const portableTextComponents = {
         : undefined;
       if (!src) return null;
       return (
-        <figure className="my-6">
+        <figure className="my-10">
           <img
             src={src}
             alt={value.alt || ""}
-            className="w-full rounded-lg"
+            className="w-full rounded-lg shadow-md"
             loading="lazy"
           />
           {value.alt && (
-            <figcaption className="text-sm text-muted-foreground mt-2 text-center">
+            <figcaption className="text-sm text-muted-foreground mt-3 text-center italic">
               {value.alt}
             </figcaption>
           )}
@@ -56,7 +56,7 @@ const NewsDetail = () => {
       <>
         <Navbar />
         <main className="min-h-screen pt-24 pb-16 px-4 flex items-center justify-center">
-          <p className="text-muted-foreground">Laster…</p>
+          <p className="text-muted-foreground animate-pulse">Laster nyheter...</p>
         </main>
         <Footer />
       </>
@@ -69,15 +69,15 @@ const NewsDetail = () => {
         <Navbar />
         <main className="min-h-screen pt-24 pb-16 px-4 flex items-center justify-center">
           <div className="text-center">
-            <h1 className="text-4xl font-bold mb-4">404</h1>
+            <h1 className="text-4xl font-bold mb-4 font-serif-display">404</h1>
             <p className="text-muted-foreground mb-6">
               Denne nyhetssaken finnes ikke.
             </p>
             <Link
               to="/nyheter"
-              className="text-primary underline hover:text-primary/90"
+              className="text-primary underline hover:text-primary/90 font-medium"
             >
-              Tilbake til nyheter
+              Tilbake til alle nyheter
             </Link>
           </div>
         </main>
@@ -86,7 +86,6 @@ const NewsDetail = () => {
     );
   }
 
-  // Determine fields depending on source (Sanity vs static)
   const isSanity = isSanityPost(post);
   const title = post.title;
   const postSlug = isSanity ? post.slug : (post as any).slug;
@@ -98,7 +97,6 @@ const NewsDetail = () => {
   const coverImageUrl = getCoverUrl(post);
   const articleUrl = `${SITE_URL}/nyheter/${postSlug}`;
 
-  // Prev / next
   const currentIndex = allPosts.findIndex((a) => a.slug === postSlug);
   const prevPost = currentIndex < allPosts.length - 1 ? allPosts[currentIndex + 1] : null;
   const nextPost = currentIndex > 0 ? allPosts[currentIndex - 1] : null;
@@ -114,22 +112,18 @@ const NewsDetail = () => {
   const copyLink = async () => {
     try {
       await navigator.clipboard.writeText(articleUrl);
-      toast.success("Lenke kopiert!");
+      toast.success("Lenke kopiert til utklippstavlen!");
     } catch {
       toast.error("Kunne ikke kopiere lenke");
     }
   };
 
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: title,
-    description: summary,
-    datePublished: publishedAt,
-    url: articleUrl,
-    ...(coverImageUrl ? { image: coverImageUrl } : {}),
-    publisher: { "@type": "Organization", name: "Storbandet Fokus" },
-  };
+  // Felles klasser for tekstbehandling (luft mellom avsnitt og overskrifter)
+  const contentClasses = "prose prose-neutral dark:prose-invert max-w-none mb-12 " + 
+    "[&_p]:text-muted-foreground [&_p]:leading-relaxed [&_p]:mb-8 " + // Mer luft mellom avsnitt
+    "[&_h3]:text-2xl [&_h3]:font-serif-display [&_h3]:font-semibold [&_h3]:text-foreground [&_h3]:mt-12 [&_h3]:mb-6 " + // Mer luft rundt overskrifter
+    "[&_blockquote]:border-l-4 [&_blockquote]:border-primary [&_blockquote]:pl-6 [&_blockquote]:italic [&_blockquote]:my-10 " + // Finere sitater
+    "[&_ul]:text-muted-foreground [&_ul]:space-y-3 [&_li]:ml-4"; // Luft i lister
 
   return (
     <>
@@ -144,45 +138,43 @@ const NewsDetail = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={seoTitle} />
         <meta name="twitter:description" content={seoDescription} />
-        {coverImageUrl && <meta name="twitter:image" content={coverImageUrl} />}
         <link rel="canonical" href={articleUrl} />
-        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>
+
       <Navbar />
       <main className="min-h-screen pt-24 pb-16 px-4">
         <div className="container mx-auto max-w-3xl">
           <Button
             variant="ghost"
-            className="mb-8 text-muted-foreground hover:text-primary"
+            className="mb-8 text-muted-foreground hover:text-primary pl-0"
             onClick={() => navigate("/nyheter")}
           >
             <ArrowLeft className="mr-2 h-4 w-4" />
             Tilbake til nyheter
           </Button>
 
-          <article className="bg-card rounded-lg border border-border p-6 md:p-10">
-            <div className="flex items-center gap-2 text-muted-foreground text-sm mb-4">
+          <article className="bg-card rounded-xl border border-border p-6 md:p-12 shadow-sm">
+            <div className="flex items-center gap-2 text-muted-foreground text-sm mb-6">
               <Calendar className="h-4 w-4" />
               <time>{formatDate(publishedAt)}</time>
             </div>
 
-            <h1 className="text-2xl md:text-3xl font-serif-display font-bold mb-6">
+            <h1 className="text-3xl md:text-4xl font-serif-display font-bold mb-8 leading-tight">
               {title}
             </h1>
 
             {coverImageUrl && (
-              <div className="flex justify-center mb-8">
+              <div className="mb-10 flex justify-center overflow-hidden rounded-lg">
                 <img
                   src={coverImageUrl}
                   alt={title}
-                  className="max-h-64 rounded-lg object-contain"
+                  className="max-h-[400px] w-full object-cover"
                 />
               </div>
             )}
 
-            {/* Body: Portable Text (Sanity) or HTML (static fallback) */}
             {isSanity ? (
-              <div className="prose prose-neutral dark:prose-invert max-w-none mb-8 [&_h3]:text-xl [&_h3]:font-serif-display [&_h3]:font-semibold [&_h3]:text-foreground [&_p]:text-muted-foreground [&_p]:leading-relaxed [&_blockquote]:border-l-4 [&_blockquote]:border-primary [&_blockquote]:pl-4 [&_blockquote]:italic [&_ul]:text-muted-foreground [&_li]:mb-1">
+              <div className={contentClasses}>
                 <PortableText
                   value={post.body}
                   components={portableTextComponents}
@@ -190,79 +182,55 @@ const NewsDetail = () => {
               </div>
             ) : (
               <div
-                className="prose prose-neutral dark:prose-invert max-w-none mb-8 [&_h3]:text-xl [&_h3]:font-serif-display [&_h3]:font-semibold [&_h3]:text-foreground [&_p]:text-muted-foreground [&_p]:leading-relaxed [&_blockquote]:border-l-4 [&_blockquote]:border-primary [&_blockquote]:pl-4 [&_blockquote]:italic [&_ul]:text-muted-foreground [&_li]:mb-1"
+                className={contentClasses}
                 dangerouslySetInnerHTML={{ __html: (post as any).content }}
               />
             )}
 
-            {/* Gallery */}
-            {isSanity && post.gallery && post.gallery.length > 0 && (
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8">
-                {post.gallery.map((img, i) => (
-                  <img
-                    key={i}
-                    src={urlFor(img).width(400).url()}
-                    alt={img.alt || `Bilde ${i + 1}`}
-                    className="w-full rounded-lg object-cover aspect-square"
-                    loading="lazy"
-                  />
-                ))}
+            {/* Deling */}
+            <div className="flex flex-col sm:flex-row sm:items-center gap-4 pt-8 border-t border-border">
+              <span className="text-sm font-semibold text-foreground">Del denne saken:</span>
+              <div className="flex gap-3">
+                <Button variant="outline" size="sm" onClick={shareOnFacebook} className="rounded-full">
+                  <Facebook className="h-4 w-4 mr-2 text-blue-600" />
+                  Facebook
+                </Button>
+                <Button variant="outline" size="sm" onClick={copyLink} className="rounded-full">
+                  <LinkIcon className="h-4 w-4 mr-2" />
+                  Kopier lenke
+                </Button>
               </div>
-            )}
-
-            {/* Tags */}
-            {isSanity && post.tags && post.tags.length > 0 && (
-              <div className="flex gap-2 flex-wrap mb-6">
-                {post.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="text-xs bg-secondary text-secondary-foreground px-2 py-0.5 rounded"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            )}
-
-            {/* Share */}
-            <div className="flex items-center gap-3 pt-6 border-t border-border">
-              <span className="text-sm text-muted-foreground">Del:</span>
-              <Button variant="outline" size="sm" onClick={shareOnFacebook}>
-                <Facebook className="h-4 w-4 mr-2" />
-                Facebook
-              </Button>
-              <Button variant="outline" size="sm" onClick={copyLink}>
-                <LinkIcon className="h-4 w-4 mr-2" />
-                Kopier lenke
-              </Button>
             </div>
           </article>
 
-          {/* Prev / Next */}
+          {/* Forrige / Neste navigasjon */}
           {(prevPost || nextPost) && (
-            <div className="flex justify-between mt-8 gap-4">
+            <div className="grid grid-cols-2 mt-12 gap-8 border-t border-border pt-8">
               {prevPost ? (
                 <Link
                   to={`/nyheter/${prevPost.slug}`}
-                  className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
+                  className="group flex flex-col gap-2 text-left"
                 >
-                  <ChevronLeft className="h-4 w-4" />
-                  <span className="line-clamp-1">{prevPost.title}</span>
+                  <span className="text-xs uppercase tracking-widest text-muted-foreground font-semibold">Forrige</span>
+                  <div className="flex items-center gap-2 group-hover:text-primary transition-colors">
+                    <ChevronLeft className="h-4 w-4 shrink-0" />
+                    <span className="text-sm font-medium line-clamp-2">{prevPost.title}</span>
+                  </div>
                 </Link>
-              ) : (
-                <div />
-              )}
+              ) : <div />}
+              
               {nextPost ? (
                 <Link
                   to={`/nyheter/${nextPost.slug}`}
-                  className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors text-right"
+                  className="group flex flex-col gap-2 text-right"
                 >
-                  <span className="line-clamp-1">{nextPost.title}</span>
-                  <ChevronRight className="h-4 w-4" />
+                  <span className="text-xs uppercase tracking-widest text-muted-foreground font-semibold">Neste</span>
+                  <div className="flex items-center justify-end gap-2 group-hover:text-primary transition-colors">
+                    <span className="text-sm font-medium line-clamp-2">{nextPost.title}</span>
+                    <ChevronRight className="h-4 w-4 shrink-0" />
+                  </div>
                 </Link>
-              ) : (
-                <div />
-              )}
+              ) : <div />}
             </div>
           )}
         </div>
@@ -276,12 +244,21 @@ function getCoverUrl(post: any): string | undefined {
   if (isSanityPost(post) && post.coverImage?.asset) {
     return sanityConfigured ? urlFor(post.coverImage).width(800).url() : undefined;
   }
-  // Static fallback
   return (post as any).coverImageUrl || (post as any).ogImageUrl;
 }
 
 function formatDate(dateStr: string): string {
-  const d = new Date(dateStr);
+  // Håndterer både YYYY-MM-DD og MM.DD.YYYY
+  let normalizedDate = dateStr;
+  if (dateStr.includes('.')) {
+    const parts = dateStr.split('.');
+    if (parts.length === 3) {
+      // Antar MM.DD.YYYY fra fila di
+      normalizedDate = `${parts[2]}-${parts[0]}-${parts[1]}`;
+    }
+  }
+  
+  const d = new Date(normalizedDate);
   if (isNaN(d.getTime())) return dateStr;
   return d.toLocaleDateString("nb-NO", {
     year: "numeric",
