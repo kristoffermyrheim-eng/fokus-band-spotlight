@@ -10,54 +10,65 @@ import kompImg from "@/assets/Komp m navn.avif";
 import dirigentImg from "@/assets/gallery-2.avif";
 import vokImg from "@/assets/gallery-1.avif";
 
+type Member = {
+  name: string;
+  role?: string;   // Valgfritt: f.eks. "Bandleder", "Soloist"
+  bio?: string;    // Valgfritt: kort info
+};
+
 const sections = [
   {
     title: "Saxofoner",
     image: saxImg,
     members: [
-      "Vidar Berg",
-      "Anne Karine Skredegård",
-      "Tom Nilsen",
-      "Hilde Ederklep",
-      "Gunn Hilde Kjølstad Hagen",
+      { name: "Vidar Berg", role: "1. Tenorsax", bio: "Medlem siden " },
+      { name: "Anne Karine Skredegård", role: "2. Altsax", bio: "Medlem siden " },
+      { name: "Tom Nilsen", role: "1. Altsax", bio: "Medlem siden " },
+      { name: "Hilde Ederklep", role: "2. Tenorsax", bio: "Medlem siden 2026" },
+      { name: "Gunn Hilde Kjølstad Hagen", role: "Baritonsax", bio: "Medlem siden " },
     ],
   },
   {
     title: "Tromboner",
     image: tromboneImg,
     members: [
-      "Kristoffer Myrheim",
-      "Trond Antonsen",
-      "Thor Ole Johnsen",
-      "Scott Rogers",
-      "Vidar Engelstad",
+      { name: "Kristoffer Myrheim", role: "2. Trombone", bio: "Medlem siden 2021" },
+      { name: "Trond Antonsen", role: "1. Trombone", bio: "Medlem siden " },
+      { name: "Thor Ole Johnsen", role: "3. Trombone", bio: "Medlem siden 1975" },
+      { name: "Scott Rogers", role: "Basstrombone", bio: "Medlem siden " },
+      { name: "Vidar Engelstad", role: "Basstrombone", bio: "Medlem siden 1975" },
     ],
   },
   {
     title: "Trompeter",
     image: trompetImg,
-    members: ["Toto Hagen", "Geir Sveen", "Sveinung Takle", "Gløer Gløersen"],
+    members: [
+      { name: "Toto Hagen", role: "2. Trompet", bio: "Medlem siden " }, 
+      { name: "Geir Sveen", role: "1. Trompet", bio: "Medlem siden " }, 
+      { name: "Sveinung Takle", role: "3. Trompet", bio: "Medlem siden " }, 
+      { name: "Gløer Gløersen", role: "4. Trompet", bio: "Medlem siden " },
+    ],
   },
   {
     title: "Komp",
     image: kompImg,
     members: [
-      "Morten Ottesen",
-      "Trygve Sivertsen",
-      "Morten Kjølstad",
-      "Jan Ekornrud",
-      "Roar Myrheim",
+      { name: "Morten Ottesen", role: "Solo gitar", bio: "Medlem siden " }, 
+      { name: "Trygve Sivertsen", role: "Rytme gitar", bio: "Medlem siden " }, 
+      { name: "Morten Kjølstad", role: "Trommer", bio: "Medlem siden " }, 
+      { name: "Jan Ekornrud", role: "Bass", bio: "Medlem siden " }, 
+      { name: "Roar Myrheim", role: "Piano", bio: "Medlem siden " }, 
     ],
   },
   {
     title: "Dirigent",
     image: dirigentImg,
-    members: ["Øyvinn Pedersen"],
+    members: [{ name: "Øyvinn Pedersen", role: "Dirigent" }, ],
   },
     {
     title: "Vokalist",
     image: vokImg,
-    members: ["Lena Jørgensen"],
+    members: [{ name: "Lena Jørgensen", role: "Vokalist" }, ],
   },
 ];
 
@@ -96,14 +107,17 @@ const Members = () => (
                 />
               </div>
               <ul className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-                {section.members.map((name) => (
+                {section.members.map((member) => (
                   <li
-                    key={name}
-                    className="bg-card border border-border rounded-md px-4 py-3 text-sm font-medium"
+                    key={member.name}
+                    className="bg-card border border-border rounded-md px-4 py-3 text-sm"
                   >
-                    {name}
-                  </li>
-                ))}
+                  <p className="font-bold">{member.name}</p>
+                    {member.role && (
+                  <p className="text-xs text-muted-foreground">{member.role}</p>
+                )}
+               </li>
+              ))}
               </ul>
             </section>
           ))}
