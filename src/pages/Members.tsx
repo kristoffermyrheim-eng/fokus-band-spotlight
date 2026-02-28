@@ -8,7 +8,7 @@ import tromboneImg from "@/assets/Tromboner m navn.jpg";
 import trompetImg from "@/assets/Trompet m navn.jpg";
 import kompImg from "@/assets/Komp m navn.avif";
 import dirigentImg from "@/assets/gallery-2.avif";
-import vokImg from "@/assets/gallery-1.avif;
+import vokImg from "@/assets/gallery-1.avif";
 
 const sections = [
   {
