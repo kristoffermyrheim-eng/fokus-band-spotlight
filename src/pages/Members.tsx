@@ -8,15 +8,16 @@ import tromboneImg from "@/assets/Tromboner m navn.jpg";
 import trompetImg from "@/assets/Trompet m navn.jpg";
 import kompImg from "@/assets/Komp m navn.avif";
 import dirigentImg from "@/assets/gallery-2.avif";
+import vokImg from "@/assets/gallery-1.avif;
 
 const sections = [
   {
     title: "Saxofoner",
     image: saxImg,
     members: [
-      "Tom Nilsen",
-      "Anne Karine Skredegård",
       "Vidar Berg",
+      "Anne Karine Skredegård",
+      "Tom Nilsen",
       "Hilde Ederklep",
       "Gunn Hilde Kjølstad Hagen",
     ],
@@ -25,32 +26,38 @@ const sections = [
     title: "Tromboner",
     image: tromboneImg,
     members: [
-      "Trond Antonsen",
       "Kristoffer Myrheim",
+      "Trond Antonsen",
       "Thor Ole Johnsen",
-      "Vidar Engelstad",
       "Scott Rogers",
+      "Vidar Engelstad",
     ],
   },
   {
     title: "Trompeter",
     image: trompetImg,
-    members: ["Geir Sveen", "Toto Hagen", "Sveinung Takle", "Gløer Gløersen"],
+    members: ["Toto Hagen", "Geir Sveen", "Sveinung Takle", "Gløer Gløersen"],
   },
   {
     title: "Komp",
     image: kompImg,
     members: [
-      "Roar Myrheim",
-      "Jan Ekornrud",
+      "Morten Ottesen",
       "Trygve Sivertsen",
       "Morten Kjølstad",
+      "Jan Ekornrud",
+      "Roar Myrheim",
     ],
   },
   {
     title: "Dirigent",
     image: dirigentImg,
     members: ["Øyvinn Pedersen"],
+  },
+    {
+    title: "Vokalist",
+    image: vokImg,
+    members: ["Lena Jørgensen"],
   },
 ];
 
