@@ -39,6 +39,7 @@ export const newsArticles: NewsArticle[] = [
     excerpt:
       "Etter et innholdsrikt jubileumsår skjer det endringer i kulissene. Kristoffer Myrheim er valgt som ny leder for Storbandet Fokus.",
     coverImageUrl: kristofferImg,
+    ogImageUrl: kristofferImg,
     content: `
       <p>Etter et innholdsrikt jubileumsår og mange år med stødig kurs, skjer det nå endringer i kulissene hos Storbandet Fokus. På årets årsmøte ble et nytt styre valgt, og vi markerer samtidig slutten på en viktig epoke i bandets historie.</p>
 
