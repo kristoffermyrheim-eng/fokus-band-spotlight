@@ -58,7 +58,7 @@ const sections = [
        bio: "Morten er en rutinert gitarist. Med sitt stødige spill og gode sjangerforståelse legger han det harmoniske og rytmiske grunnlaget som trengs for at storband-sounden skal sitte som støpt. " }, 
       { name: "Trygve Sivertsen", 
        role: "Rytme gitar", 
-       bio: "Stødig gitarist med lang fartstid. Trygve har vært en sentral brikke i driften av bandet i en årrekke. " }, 
+       bio: "Stødig gitarist med fartstid i bandet helt tilbake til 1982! Trygve har vært en sentral brikke i driften av bandet i en årrekke. " }, 
       { name: "Morten Kjølstad", 
        role: "Trommer", 
        bio: "Holder takten og energien oppe i alt fra tradisjonell jazz til dansbare låter. " }, 
