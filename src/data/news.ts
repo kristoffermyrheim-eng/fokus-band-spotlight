@@ -1,8 +1,6 @@
-import bakgardsfestivalenLogo from "@/assets/bakgardsfestivalen-logo.jpg";
-import kristofferImg from "@/assets/Kristoffer Myrheim.jpg";
+import kristofferImg from "../assets/Kristoffer Myrheim.jpg";
 
-export interface NewsArticle {
-  id: string;
+export interface NewsArticle {  id: string;
   title: string;
   slug: string;
   date: string; // ISO string
