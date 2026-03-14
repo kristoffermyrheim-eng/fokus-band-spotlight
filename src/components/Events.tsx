@@ -1,4 +1,13 @@
-import { CalendarDays } from "lucide-react";
+import { CalendarDays, MapPin, ExternalLink } from "lucide-react";
+
+const events = [
+  {
+    date: "20. juni 2026",
+    title: "Lørdagsjazzen",
+    venue: "Kulturhuset i Drammen",
+    url: "https://drammenkulturhus.no",
+  },
+];
 
 const Events = () => (
   <section id="events" className="py-24 px-4">
@@ -10,9 +19,31 @@ const Events = () => (
         Se hvor du kan oppleve oss live.
       </p>
 
-      <div className="bg-card border border-border rounded-lg p-8 text-center">
-        <CalendarDays size={24} className="mx-auto text-muted-foreground mb-3" />
-        <p className="text-muted-foreground text-lg">Ingen planlagte konserter akkurat nå.</p>
+      <div className="space-y-4">
+        {events.map((event, i) => (
+          <a
+            key={i}
+            href={event.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-card border border-border rounded-lg p-6 flex flex-col sm:flex-row sm:items-center gap-4 hover:shadow-lg transition-shadow group"
+          >
+            <div className="flex items-center gap-3 text-primary font-medium min-w-[160px]">
+              <CalendarDays size={20} />
+              <span>{event.date}</span>
+            </div>
+            <div className="flex-1">
+              <h3 className="font-serif-display font-bold text-lg group-hover:text-primary transition-colors">
+                {event.title}
+              </h3>
+              <div className="flex items-center gap-1.5 text-muted-foreground text-sm mt-1">
+                <MapPin size={14} />
+                <span>{event.venue}</span>
+              </div>
+            </div>
+            <ExternalLink size={18} className="text-muted-foreground group-hover:text-primary transition-colors shrink-0" />
+          </a>
+        ))}
       </div>
     </div>
   </section>
