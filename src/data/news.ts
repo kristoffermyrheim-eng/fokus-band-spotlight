@@ -1,4 +1,5 @@
 import kristofferImg from "../assets/Kristoffer Myrheim.jpg";
+import kulturhusetImg from "../assets/kulturhuset-drammen.jpg";
 
 export interface NewsArticle {  id: string;
   title: string;
@@ -11,6 +12,37 @@ export interface NewsArticle {  id: string;
 }
 
 export const newsArticles: NewsArticle[] = [
+  {
+    id: "2",
+    title: "Storbandet Fokus spiller på Lørdagsjazzen i Drammen",
+    slug: "lordagsjazzen-drammen-2026",
+    date: "14.03.2026",
+    excerpt:
+      "Lørdag 20. juni inntar Storbandet Fokus scenen på Kulturhuset i Drammen som en del av den populære konsertserien Lørdagsjazzen.",
+    coverImageUrl: kulturhusetImg,
+    ogImageUrl: kulturhusetImg,
+    content: `
+      <p>Vi er stolte og glade for å kunne annonsere at Storbandet Fokus er invitert til å spille på <strong>Lørdagsjazzen</strong> på <a href="https://drammenkulturhus.no" target="_blank" rel="noopener noreferrer">Kulturhuset i Drammen</a> lørdag 20. juni 2026!</p>
+
+      <h3>Om Lørdagsjazzen</h3>
+      <p>Lørdagsjazzen er en av Drammens mest populære konsertserier, og trekker et stort og engasjert publikum gjennom hele sesongen. Konsertene arrangeres på Kulturhuset i Drammen, som med sin flotte akustikk og intime atmosfære gir en perfekt ramme for livejazz.</p>
+
+      <h3>Storbandmusikk i storformat</h3>
+      <p>Storbandet Fokus stiller med sine 18 musikere og byr på et variert program med alt fra klassiske storbandlåter til moderne arrangementer. Med et bredt repertoar som spenner fra swing og latin til funk og pop, garanterer vi en kveld med musikalsk bredde og spilleglede.</p>
+
+      <blockquote>"Det er alltid en stor opplevelse å spille for et nytt publikum, og vi gleder oss enormt til å innta scenen på Kulturhuset i Drammen. Lørdagsjazzen har et fantastisk rykte, og vi lover å gi alt vi har!" sier bandets leder Kristoffer Myrheim.</blockquote>
+
+      <h3>Praktisk informasjon</h3>
+      <ul>
+        <li><strong>Dato:</strong> Lørdag 20. juni 2026</li>
+        <li><strong>Sted:</strong> Kulturhuset i Drammen</li>
+        <li><strong>Konserttype:</strong> Lørdagsjazzen</li>
+        <li><strong>Mer info:</strong> <a href="https://drammenkulturhus.no" target="_blank" rel="noopener noreferrer">drammenkulturhus.no</a></li>
+      </ul>
+
+      <p>Vi håper å se mange kjente og nye fjes i salen. Ta turen til Drammen og opplev Storbandet Fokus live!</p>
+    `,
+  },
   {
     id: "1",
     title:
