@@ -24,7 +24,7 @@ const sections = [
       { name: "Vidar Berg", role: "1. Tenorsax", bio: "Medlem siden " },
       { name: "Anne Karine Skredegård", role: "2. Altsax", bio: "Medlem siden " },
       { name: "Tom Nilsen", role: "1. Altsax", bio: "Medlem siden " },
-      { name: "Hilde Ederklep", role: "2. Tenorsax", bio: "Medlem siden 2026" },
+      { name: "Hilde Ederklep", role: "2. Tenorsax", bio: "Har spilt sax i mange år, mye korps men også andre settinger. Altsax i Fokus fra 2018 til 2020. Begynt igjen  på tensax nå i 2026." },
       { name: "Gunn Hilde Kjølstad Hagen", role: "Baritonsax", bio: "Medlem siden " },
     ],
   },
@@ -32,11 +32,11 @@ const sections = [
     title: "Tromboner",
     image: tromboneImg,
     members: [
-      { name: "Kristoffer Myrheim", role: "2. Trombone", bio: "Medlem siden 2021" },
+      { name: "Kristoffer Myrheim", role: "2. Trombone", bio: "Medlem siden 2021. Fikk ledervervet i styret i 2026." },
       { name: "Trond Antonsen", role: "1. Trombone", bio: "Medlem siden " },
       { name: "Thor Ole Johnsen", role: "3. Trombone", bio: "Medlem siden 1975" },
       { name: "Scott Rogers", role: "Basstrombone", bio: "Medlem siden " },
-      { name: "Vidar Engelstad", role: "Basstrombone", bio: "Medlem siden 1975" },
+      { name: "Vidar Engelstad", role: "Basstrombone", bio: "Medlem siden 1975. Har spilt trommer, baryton, horn, ventiltrombone, tenor og basstrombone. Har hatt diverse verv i bandet. For tiden vaktmester og kaffekoker." },
     ],
   },
   {
