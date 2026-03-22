@@ -1,5 +1,5 @@
 import kristofferImg from "../assets/Kristoffer Myrheim.jpg";
-import kulturhusetImg from "../assets/kulturhuset-drammen.jpg";
+import kulturhusetImg from "../assets/Fokus_ABBA.jpg";
 
 export interface NewsArticle {  id: string;
   title: string;
@@ -37,7 +37,7 @@ export const newsArticles: NewsArticle[] = [
         <li><strong>Dato:</strong> Lørdag 20. juni 2026</li>
         <li><strong>Sted:</strong> Kulturhuset i Drammen</li>
         <li><strong>Konserttype:</strong> Lørdagsjazzen</li>
-        <li><strong>Mer info:</strong> <a href="https://drammenkulturhus.no" target="_blank" rel="noopener noreferrer">drammenkulturhus.no</a></li>
+        <li><strong>Mer info:</strong> <a href="https://www.drammenkulturhus.no/arrangement/lordagsjazzen-storbandet-fokus" target="_blank" rel="noopener noreferrer">drammenkulturhus.no</a></li>
       </ul>
 
       <p>Vi håper å se mange kjente og nye fjes i salen. Ta turen til Drammen og opplev Storbandet Fokus live!</p>
