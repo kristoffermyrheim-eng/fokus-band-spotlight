@@ -1,5 +1,5 @@
 import kristofferImg from "../assets/Kristoffer Myrheim.jpg";
-import kulturhusetImg from "../assets/Fokus_ABBA.jpg";
+import kulturhusetImg from "../assets/Fokus_Abbakonsert.jpg";
 
 export interface NewsArticle {  id: string;
   title: string;
