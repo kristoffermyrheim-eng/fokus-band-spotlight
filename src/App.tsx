@@ -12,6 +12,7 @@ import NewsList from "./pages/NewsList";
 import NewsDetail from "./pages/NewsDetail";
 import Videos from "./pages/Videos";
 import NotFound from "./pages/NotFound";
+import CookieConsent from "./components/CookieConsent";
 
 const queryClient = new QueryClient();
 
