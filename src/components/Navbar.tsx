@@ -11,6 +11,7 @@ const links = [
   { label: "Vår Historie", href: "/var-historie" },
   { label: "Nyheter", href: "/nyheter" },
   { label: "Videoer", href: "/videoer" },
+  { label: "For medlemmer", href: "/medlemsside" },
   { label: "Kontakt", href: "#contact" },
 ];
 
