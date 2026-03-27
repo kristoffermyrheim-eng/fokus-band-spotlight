@@ -7,6 +7,7 @@ import { HelmetProvider } from "react-helmet-async";
 import Index from "./pages/Index";
 import History from "./pages/History";
 import Members from "./pages/Members";
+import Medlemsside from "./pages/Medlemsside";
 import NewsList from "./pages/NewsList";
 import NewsDetail from "./pages/NewsDetail";
 import Videos from "./pages/Videos";
