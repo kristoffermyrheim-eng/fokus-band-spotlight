@@ -7,6 +7,7 @@ import { HelmetProvider } from "react-helmet-async";
 import Index from "./pages/Index";
 import History from "./pages/History";
 import Members from "./pages/Members";
+import Medlemsside from "./pages/Medlemsside";
 import NewsList from "./pages/NewsList";
 import NewsDetail from "./pages/NewsDetail";
 import Videos from "./pages/Videos";
@@ -25,6 +26,7 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/var-historie" element={<History />} />
             <Route path="/medlemmer" element={<Members />} />
+            <Route path="/medlemsside" element={<Medlemsside />} />
             <Route path="/nyheter" element={<NewsList />} />
             <Route path="/nyheter/:slug" element={<NewsDetail />} />
             <Route path="/videoer" element={<Videos />} />
