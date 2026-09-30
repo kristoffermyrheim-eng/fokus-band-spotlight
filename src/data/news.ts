@@ -37,7 +37,7 @@ export const newsArticles: NewsArticle[] = [
       </ul>
 
       <h3>Interessert?</h3>
-      <p>Ta kontakt med styret via <a href="/medlemsside">Slack</a> eller bruk <a href="/#contact">kontaktskjemaet</a> på nettsiden. Vi gleder oss til å høre fra deg!</p>
+      <p>Ta kontakt på telefon <a href="tel:+4740454960">404 54 960</a>, eller bruk <a href="/#contact">kontaktskjemaet</a> på nettsiden. Vi gleder oss til å høre fra deg!</p>
     `,
   },
   {
