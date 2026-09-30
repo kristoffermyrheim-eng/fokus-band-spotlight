@@ -1,11 +1,13 @@
-import { CalendarDays, MapPin, ExternalLink } from "lucide-react";
+import { CalendarDays, MapPin, Clock, ExternalLink } from "lucide-react";
 
 const events = [
   {
-    date: "20. juni 2026",
-    title: "Lørdagsjazzen",
-    venue: "Kulturhuset i Drammen",
-    url: "https://drammenkulturhus.no",
+    date: "5. desember 2026",
+    title: "Førjulskonsert med Storbandet Fokus og Mannskoret GOOSE",
+    venue: "Støperiet i Tønsberg",
+    time: "Dørene åpnes kl. 17 – Konsertstart kl. 18",
+    url: "https://goose.hoopla.no/event/1346970082",
+    cta: "Kjøp billett",
   },
 ];
 
@@ -36,12 +38,21 @@ const Events = () => (
               <h3 className="font-serif-display font-bold text-lg group-hover:text-primary transition-colors">
                 {event.title}
               </h3>
-              <div className="flex items-center gap-1.5 text-muted-foreground text-sm mt-1">
-                <MapPin size={14} />
-                <span>{event.venue}</span>
+              <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-muted-foreground text-sm mt-1">
+                <span className="flex items-center gap-1.5">
+                  <MapPin size={14} />
+                  <span>{event.venue}</span>
+                </span>
+                <span className="flex items-center gap-1.5">
+                  <Clock size={14} />
+                  <span>{event.time}</span>
+                </span>
               </div>
             </div>
-            <ExternalLink size={18} className="text-muted-foreground group-hover:text-primary transition-colors shrink-0" />
+            <span className="text-sm font-medium text-primary group-hover:underline shrink-0 flex items-center gap-1.5">
+              {event.cta}
+              <ExternalLink size={16} className="transition-colors" />
+            </span>
           </a>
         ))}
       </div>
