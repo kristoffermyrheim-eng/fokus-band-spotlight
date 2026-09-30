@@ -1,5 +1,6 @@
 import kristofferImg from "../assets/Kristoffer Myrheim.jpg";
 import kulturhusetImg from "../assets/Fokus_Abbakonsert.jpg";
+import vikarGitarImg from "../assets/vikar-gitar.jpg";
 
 export interface NewsArticle {  id: string;
   title: string;
@@ -12,6 +13,33 @@ export interface NewsArticle {  id: string;
 }
 
 export const newsArticles: NewsArticle[] = [
+  {
+    id: "3",
+    title: "Vi søker vikar på gitar!",
+    slug: "vi-soker-vikar-pa-gitar",
+    date: "30.09.2026",
+    excerpt:
+      "Storbandet Fokus leter etter en engasjert gitarist som kan steppe inn som vikar for en periode framover.",
+    coverImageUrl: vikarGitarImg,
+    ogImageUrl: vikarGitarImg,
+    content: `
+      <p>Storbandet Fokus leter etter en engasjert gitarist som kan steppe inn som vikar i kompgruppen for en periode framover.</p>
+
+      <h3>Hvem ser vi etter?</h3>
+      <p>Du bør ha god erfaring med gitar og lyst til å spille storbandmusikk i et velfungerende og hyggelig miljø. Erfaring med jazz er et pluss, men ikke et krav — det viktigste er spilleglede, pålitelighet og vilje til å øve sammen med resten av bandet.</p>
+
+      <h3>Hva kan vi tilby?</h3>
+      <ul>
+        <li>Et engasjert storband med lange tradisjoner og godt sosialt miljø</li>
+        <li>Ukentlige øvelser på Re videregående skole</li>
+        <li>Spennende konsertoppdrag og variert repertoar</li>
+        <li>Noter og øvingsmateriell tilgjengelig digitalt</li>
+      </ul>
+
+      <h3>Interessert?</h3>
+      <p>Ta kontakt med styret via <a href="/medlemsside">Slack</a> eller bruk <a href="/#contact">kontaktskjemaet</a> på nettsiden. Vi gleder oss til å høre fra deg!</p>
+    `,
+  },
   {
     id: "2",
     title: "Storbandet Fokus spiller på Lørdagsjazzen i Drammen",
