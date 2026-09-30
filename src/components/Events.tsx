@@ -1,11 +1,13 @@
-import { CalendarDays, MapPin, ExternalLink } from "lucide-react";
+import { CalendarDays, MapPin, Clock, ExternalLink } from "lucide-react";
 
 const events = [
   {
-    date: "20. juni 2026",
-    title: "Lørdagsjazzen",
-    venue: "Kulturhuset i Drammen",
-    url: "https://drammenkulturhus.no",
+    date: "5. desember 2026",
+    title: "Førjulskonsert med Storbandet Fokus og Mannskoret GOOSE",
+    venue: "Støperiet i Tønsberg",
+    time: "Dørene åpnes kl. 17 – Konsertstart kl. 18",
+    url: "https://goose.hoopla.no/event/1346970082",
+    cta: "Kjøp billett",
   },
 ];
 
