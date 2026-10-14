@@ -6,7 +6,7 @@ import gooseImg from "../assets/goose-fokus-stoperiet-plakat.jpg";
 export interface NewsArticle {  id: string;
   title: string;
   slug: string;
-  date: string; // ISO string
+  date: string; // DD.MM.YYYY
   excerpt: string;
   content: string; // HTML
   coverImageUrl?: string;
@@ -113,7 +113,7 @@ export const newsArticles: NewsArticle[] = [
     title:
       "Nye takter i Storbandet Fokus: Kristoffer Myrheim tar over som leder i styret",
     slug: "nytt-styre-2026",
-    date: "02.12.2026",
+    date: "12.02.2026",
     excerpt:
       "Etter et innholdsrikt jubileumsår skjer det endringer i kulissene. Kristoffer Myrheim er valgt som ny leder for Storbandet Fokus.",
     coverImageUrl: kristofferImg,
