@@ -1,6 +1,7 @@
 import kristofferImg from "../assets/Kristoffer Myrheim.jpg";
 import kulturhusetImg from "../assets/Fokus_Abbakonsert.jpg";
 import vikarGitarImg from "../assets/vikar-gitar.jpg";
+import gooseImg from "../assets/forjulskonsert-goose.jpg";
 
 export interface NewsArticle {  id: string;
   title: string;
