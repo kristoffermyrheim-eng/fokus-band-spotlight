@@ -5,6 +5,10 @@ import { componentTagger } from "lovable-tagger";
 
 export default defineConfig(({ mode }) => ({
   base: "/", // ✅ KRITISK FOR GITHUB PAGES
+  build: {
+    // scripts/prerender.mjs bruker manifestet til å finne de hashede bildefilene
+    manifest: true,
+  },
   server: {
     host: "::",
     port: 8080,
