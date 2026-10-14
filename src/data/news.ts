@@ -15,6 +15,42 @@ export interface NewsArticle {  id: string;
 
 export const newsArticles: NewsArticle[] = [
   {
+    id: "4",
+    title: "Mannskor og storband går sammen om førjulskonsert på Støperiet",
+    slug: "forjulskonsert-goose-storbandet-fokus",
+    date: "14.10.2026",
+    excerpt:
+      "Mannskoret GOOSE og Storbandet Fokus inviterer til en felles konsert på Støperiet scene i Tønsberg lørdag 5. desember. Publikum får fyldig mannskorsang, swingende storbandmusikk og en smak av jul på samme kveld.",
+    coverImageUrl: gooseImg,
+    ogImageUrl: gooseImg,
+    content: `
+      <p><strong>Mannskoret GOOSE og Storbandet Fokus inviterer til en felles konsert på Støperiet scene i Tønsberg lørdag 5. desember. Publikum får fyldig mannskorsang, swingende storbandmusikk og en smak av jul på samme kveld.</strong></p>
+
+      <p>To godt etablerte musikkmiljøer slår seg sammen for første gang. GOOSE (Gregershølet Og Omegn Sang Ensemble) og Storbandet Fokus, som har holdt på siden 1975, står på scenen sammen gjennom hele kvelden. Konserten er delt i to sett med pause mellom.</p>
+
+      <p>Programmet spenner vidt. Når de fremfører sammen, får vi høre alt fra James Bond-musikk, ABBA-klassikere og julelåter som «Fairytale of New York» og «Winter Wonderland». I tillegg vil hvert av ensemblene fremføre låter fra egne repertoar.</p>
+
+      <blockquote>«Her blir det litt av alt. Når et mannskor og et fullt storband står på scenen samtidig, blir lydbildet noe helt eget. Og siden julen nærmer seg, blir det selvsagt også noen juletoner,» sier Kristoffer Myrheim i Storbandet Fokus.</blockquote>
+
+      <p>Korister og musikere vil øve sammen på felleslåtene i høst, blant annet på Re videregående skole, der generalprøven også holdes 2. desember.</p>
+
+      <blockquote>«Vi håper mange vil ta turen. Dette passer fint som starten på en julebordkveld, eller som en kveld ute med gode venner,» sier Lars Kristian Rusten i GOOSE.</blockquote>
+
+      <p>Det er allerede blitt solgt ganske mange billetter, så det kan lønne seg å være tidlig ute med å kjøpe billetter! Billetter kan kjøpes på <a href="https://goose.hoopla.no/event/1346970082" target="_blank" rel="noopener noreferrer">goose.hoopla.no</a> eller ved inngangen (hvis det er flere billetter igjen). Dørene åpner kl. 17.00, og i lokalet vil det bli solgt mineralvann, øl og vin.</p>
+
+      <h3>Fakta om konserten</h3>
+      <ul>
+        <li><strong>Hva:</strong> Julekonsert med GOOSE og Storbandet Fokus</li>
+        <li><strong>Hvor:</strong> Støperiet scene, Tønsberg</li>
+        <li><strong>Når:</strong> Lørdag 5. desember, konsertstart kl. 18.00 (dørene åpner kl. 17.00)</li>
+        <li><strong>Billetter:</strong> Kr 380. Kjøp på <a href="https://goose.hoopla.no/event/1346970082" target="_blank" rel="noopener noreferrer">goose.hoopla.no/event/1346970082</a> eller ved inngangen</li>
+        <li><strong>Program:</strong> Storband, mannskor og fellesnummer, med alt fra Queen, ABBA og James Bond til julemusikk</li>
+      </ul>
+
+      <p>Vi håper å se mange kjente og nye fjes i publikum – velkommen til førjulskonsert på Støperiet!</p>
+    `,
+  },
+  {
     id: "3",
     title: "Vi søker vikar på gitar!",
     slug: "vi-soker-vikar-pa-gitar",
