@@ -1,7 +1,7 @@
 import kristofferImg from "../assets/Kristoffer Myrheim.jpg";
 import kulturhusetImg from "../assets/Fokus_Abbakonsert.jpg";
 import vikarGitarImg from "../assets/vikar-gitar.jpg";
-import gooseImg from "../assets/forjulskonsert-goose.jpg";
+import gooseImg from "../assets/goose-fokus-stoperiet-plakat.jpg";
 
 export interface NewsArticle {  id: string;
   title: string;
@@ -140,9 +140,15 @@ export const newsArticles: NewsArticle[] = [
   },
 ];
 
+// Dates are stored as DD.MM.YYYY, so compare them as dates — not as strings
+const toTimestamp = (date: string) => {
+  const [day, month, year] = date.split(".").map(Number);
+  return new Date(year, month - 1, day).getTime();
+};
+
 // Sorted newest first
 export const getNewsArticles = () =>
-  [...newsArticles].sort((a, b) => b.date.localeCompare(a.date));
+  [...newsArticles].sort((a, b) => toTimestamp(b.date) - toTimestamp(a.date));
 
 export const getNewsArticleBySlug = (slug: string) =>
   newsArticles.find((a) => a.slug === slug);
